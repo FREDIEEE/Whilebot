@@ -1,6 +1,8 @@
 from time import sleep, time, localtime,strftime
 import threading
 import logging
+import os
+import sys
 
 global USERS
 logging.basicConfig(level=logging.INFO, format='%(levelname)s-%(message)s')
@@ -13,7 +15,7 @@ def hilo_time():
 
 
 if __name__ == "__main__":
-
+    logging.info(os.environ)
     logging.info("ALF_API: Iniciando servicio infinito")
     hilo = threading.Thread(name="hilo_webhook", target=hilo_time)
     hilo.start()
