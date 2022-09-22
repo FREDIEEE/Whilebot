@@ -11,7 +11,7 @@ def hilo_time():
     while True:
         TimeNow = strftime("%H:%M:%S", localtime())
         logging.info(f"ALF_API: Corriendo servidor x tiempo {TimeNow}")
-        sleep(30) #Cada 5 min
+        sleep(300) #Cada 5 min
 
 
 if __name__ == "__main__":
